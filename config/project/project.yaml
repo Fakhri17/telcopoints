@@ -1,0 +1,22 @@
+dateModified: 1676356379
+email:
+  fromEmail: admin@gmail.com
+  fromName: telcopoints
+  transportType: craft\mail\transportadapters\Sendmail
+meta:
+  __names__:
+    5f9b6819-1692-464d-adb5-8974c35e9d03: telcopoints # telcopoints
+    ca8c6a64-a648-4dcf-9b70-f800be9f3459: Common # Common
+    fe9a96dd-f659-48a1-9d2c-a7e9df599648: telcopoints # telcopoints
+system:
+  edition: solo
+  live: true
+  name: telcopoints
+  schemaVersion: 4.0.0.9
+  timeZone: America/Los_Angeles
+users:
+  allowPublicRegistration: false
+  defaultGroup: null
+  photoSubpath: null
+  photoVolumeUid: null
+  requireEmailVerification: true
