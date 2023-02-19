@@ -1,6 +1,5 @@
 /********** Template CSS **********/
 :root {
-    /* --primary: #rgb(52,100,75); */
     --primary: #06A3DA;
     --secondary: #34AD54;
     --light: #EEF9FF;
@@ -139,16 +138,12 @@ h6,
 
 .sticky-top.navbar-dark .navbar-nav .nav-link {
     padding: 20px 0;
-    /* color: var(--dark); */
-    color: white;
-    /* background-color: wheat; */
-    /* color: white; */
+    color: var(--dark);
 }
 
 .navbar-dark .navbar-nav .nav-link:hover,
 .navbar-dark .navbar-nav .nav-link.active {
     color: var(--primary);
-    /* color: ; */
 }
 
 .navbar-dark .navbar-brand h1 {
@@ -163,17 +158,14 @@ h6,
 @media (max-width: 991.98px) {
     .sticky-top.navbar-dark {
         position: relative;
-        /* background: #FFFFFF; */
-        background: #64C191;
-
+        background: #FFFFFF;
     }
 
     .navbar-dark .navbar-nav .nav-link,
     .navbar-dark .navbar-nav .nav-link.show,
     .sticky-top.navbar-dark .navbar-nav .nav-link {
         padding: 10px 0;
-        /* color: var(--dark); */
-        color: white;
+        color: var(--dark);
     }
 
     .navbar-dark .navbar-brand h1 {
@@ -193,8 +185,7 @@ h6,
     
     .sticky-top.navbar-dark {
         position: fixed;
-        /* background: #FFFFFF; */
-        background: black;
+        background: #FFFFFF;
     }
 
     .navbar-dark .navbar-nav .nav-link::before {
@@ -204,8 +195,7 @@ h6,
         height: 2px;
         bottom: -1px;
         left: 50%;
-        /* background: var(--primary);
-        background: var(--primary); */
+        background: var(--primary);
         transition: .5s;
     }
 
@@ -221,7 +211,6 @@ h6,
 
     .sticky-top.navbar-dark .navbar-brand h1 {
         color: var(--primary);
-        /* color: white; */
     }
 }
 

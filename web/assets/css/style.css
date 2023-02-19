@@ -1,0 +1,149 @@
+
+html,body{ scroll-behavior: smooth}
+
+
+
+:root {
+    --primary: #64C191 !important;
+    /* --secondary: #34AD54;
+    --light: #EEF9FF;
+    --dark: #091E3E; */
+}
+
+/* Header colors*/
+.header-colors {
+    color: var(--primary); 
+}
+/* Header colors end*/
+
+/* background-logo colors*/
+.bg-colors {
+    background-color: var(--primary); 
+}
+/* background-logo colors end*/
+
+/*** Carousel ***/
+.carousel-caption {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #64C191;
+    z-index: 1;
+}
+/*** Carousel End ***/
+
+/*** Button to Top ***/
+.btn {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
+    transition: .5s;
+}
+
+.btn-primary,
+.btn-secondary {
+    color: #FFFFFF;
+    box-shadow: inset 0 0 0 50px transparent;
+    background-color: #64C191;
+}
+
+.btn-primary:hover {
+    box-shadow: inset 0 0 0 0 var(--primary);
+    background-color: var(--primary);
+    border-color: white;
+}
+
+.btn-secondary:hover {
+    box-shadow: inset 0 0 0 0 var(--primary);
+}
+
+.btn-square {
+    width: 36px;
+    height: 36px;
+}
+
+.btn-sm-square {
+    width: 30px;
+    height: 30px;
+}
+
+.btn-lg-square {
+    width: 48px;
+    height: 48px;
+}
+
+.btn-square,
+.btn-sm-square,
+.btn-lg-square {
+    padding-left: 0;
+    padding-right: 0;
+    text-align: center;
+}
+/*** Button to Top End ***/
+
+/* text colors*/
+.text-colors {
+    color: var(--primary); 
+}
+/* text colors end*/
+
+/* bg object-fit*/
+.bg-fit {
+    object-fit: cover !important; 
+}
+/* bg object-fit end*/
+
+
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link.active {
+    color: var(--primary);
+}
+
+@media (max-width: 991.98px) {
+    .sticky-top.navbar-dark {
+        position: relative;
+        background: #FFFFFF;
+        /* background: #64C191; */
+
+    }
+
+    .navbar-dark .navbar-nav .nav-link,
+    .navbar-dark .navbar-nav .nav-link.show,
+    .sticky-top.navbar-dark .navbar-nav .nav-link {
+        padding: 10px 0;
+        color: var(--dark);
+        /* color: white; */
+    }
+
+    .navbar-dark .navbar-brand h1 {
+        color: #64C191;
+    }
+}
+
+@media (min-width: 992px) {
+    
+    .sticky-top.navbar-dark {
+        position: fixed;
+        background: #FFFFFF;
+        /* background: black; */
+    }
+
+    .sticky-top.navbar-dark .navbar-brand h1 {
+        /* color: var(--primary); */
+        /* color: black; */
+        color: #64C191;
+
+    }
+
+    .navbar-dark .navbar-nav .nav-link::before {
+        background: #64C191;
+
+    }
+
+    .contact {
+        display: grid;
+        align-items: center;
+        justify-content: center;
+
+    }
+}
