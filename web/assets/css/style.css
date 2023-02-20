@@ -147,3 +147,7 @@ html,body{ scroll-behavior: smooth}
 
     }
 }
+
+.rounded-5{
+    border-radius: 1rem;
+}
