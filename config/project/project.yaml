@@ -1,4 +1,4 @@
-dateModified: 1677220861
+dateModified: 1677221216
 email:
   fromEmail: admin@gmail.com
   fromName: telcopoints
@@ -20,7 +20,7 @@ plugins:
     schemaVersion: 1.0.0
     settings:
       labelColor: ''
-      labelText: null
+      labelText: dev
       prefixText: null
       showLabel: true
       suffixText: null
