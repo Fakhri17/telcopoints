@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-dateModified: 1676536607
-=======
-dateModified: 1676510513
->>>>>>> 572e88cf62023106f7308b43b0c15f80116edad9
+dateModified: 1677220861
 email:
   fromEmail: admin@gmail.com
   fromName: telcopoints
@@ -10,8 +6,54 @@ email:
 meta:
   __names__:
     5f9b6819-1692-464d-adb5-8974c35e9d03: telcopoints # telcopoints
+    9f17022c-98b5-4b7f-8278-52ebb29aca4b: Email # Email
     ca8c6a64-a648-4dcf-9b70-f800be9f3459: Common # Common
     fe9a96dd-f659-48a1-9d2c-a7e9df599648: telcopoints # telcopoints
+plugins:
+  dumper:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  environment-label:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+    settings:
+      labelColor: ''
+      labelText: null
+      prefixText: null
+      showLabel: true
+      suffixText: null
+      targetSelector: '#global-header:before'
+      textColor: ''
+  phone-number:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  redactor:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.3.0
+  retcon:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  seomate:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  super-table:
+    edition: standard
+    enabled: true
+    schemaVersion: 3.0.0
+  typedlinkfield:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.0.0
+  wordsmith:
+    edition: standard
+    enabled: true
+    schemaVersion: 0.0.0.0
 system:
   edition: solo
   live: true
