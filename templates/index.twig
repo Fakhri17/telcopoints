@@ -6,26 +6,26 @@
 	<div id="header-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
 		<div class="carousel-inner">
 			<div class="carousel-item active">
-				<div class="w-100" style="width: 100vw; min-height: 100vh;" alt="Image"></div>
+				<div class="w-100 height-banner" style="width: 100vw;" alt="Image"></div>
 				<div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
 					<div class="p-3" style="max-width: 900px;">
 						<h5 class="text-white text-uppercase mb-3">Creative & Innovative</h5>
 						<h1 class="display-1 text-white mb-md-4">Creative & Innovative Digital
 							Solution</h1>
-						<a href="" class="btn btn-outline-light py-md-3 px-md-5">Contact
+						<a href="#contact" class="btn btn-outline-light py-md-3 px-md-5">Contact
 							Us</a>
 					</div>
 				</div>
 			</div>
-			
+
 		</div>
 	</div>
 </div>
 
 <div class="container-fluid py-5" id="about">
 	<div class="container py-5">
-		<div class="row g-5 justify-content-center">
-			<div class="col-lg-7">
+		<div class="row">
+			<div class="col-lg-7 col-12">
 				<div class="section-title position-relative pb-3 mb-5">
 					<h5 class="fw-bold header-colors text-uppercase">About Us</h5>
 					<h1 class="mb-0">The Best IT Solution With 10 Years of Experience</h1>
@@ -34,14 +34,15 @@
 					amet diam et eos labore. Clita erat ipsum et lorem et sit, sed stet no labore lorem sit. Sanctus
 					clita duo justo et tempor eirmod magna dolore erat amet</p>
 			</div>
-			<div class="col-lg-5" style="min-height: 400px;">
-				<div class="position-relative h-100">
-					<img class="position-absolute w-100 h-100 bg-fit rounded"
-						src="{{siteUrl}}assets/img/logo_telco_prev_ui.png">
+			<div class="col-lg-5 col-12">
+				<div class="text-center">
+					<img class="img-fluid mb-3" src="{{siteUrl}}assets/img/logo_telco_prev_ui.png">
 				</div>
-				{# <div class="text-center text-uppercase p-5 mx-auto">
-					<h1 class="mb-0 fw-bold header-size">Telco One Point</h1>
-				</div> #}
+				{# yang perlu diganti #}
+				<div class="text-center text-uppercase">
+					<h1 class="mb-0 fs-1 fw-bold">Telco One Point</h1>
+				</div>
+				{# end #}
 			</div>
 		</div>
 	</div>
@@ -51,89 +52,56 @@
 
 
 <!-- Service Start -->
-<div class="container-fluid py-5" id="services">
-	<div class="container py-5">
-		<div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
-			<h5 class="fw-bold header-colors text-uppercase">Our Services</h5>
-			<h1 class="mb-0">Custom IT Solutions for Your Successful Business</h1>
-		</div>
-		<div class="row g-5">
-			{% for item in 1..6 %}
-				<div class="col-lg-4 col-md-6">
-					<div
-						class="service-item bg-colors rounded-5 d-flex flex-column align-items-center justify-content-center text-center">
-						{# <div class="service-icon">
-							<i class="fa fa-shield-alt text-white"></i>
-						</div> #}
-						<h3 class="mb-3 text-white">Cyber Security</h3>
-						<p class="m-0 text-white">Amet justo dolor lorem kasd amet magna sea stet eos vero lorem ipsum dolore sed
-						</p>
-						{# <a class="btn btn-lg btn-primary rounded" href="">
-							<i class="bi bi-arrow-right"></i>
-						</a> #}
-					</div>
-				</div>
-			{% endfor %}
-			
-		</div>
-	</div>
-</div>
+{% include "_includes/services.twig" %}
 <!-- Service End -->
 
 
 <!-- Contact us Start -->
-<div class="container py-5" id="contact">
+<div class="container-fluid py-5" id="contact">
 	<div class="container py-5">
-		<div class="row g-5">
-			<div class="section-title row position-relative pb-3 mb-5 text-center justify-content-center">
+		<div class="row">
+			<div class="section-title position-relative pb-3 mb-5 text-center justify-content-center">
 				<h3 class="fw-bold header-colors text-uppercase">Contact Us</h3>
 				<h5 class="fw-bold text-uppercase">If You Have Any Query, Feel Free To Contact Us</h5>
 			</div>
-			<div class="row" style="min-height: 500px;">
-				<div class="position-relative h-100 align-items-center">
-					<img class="position-absolute w-100 h-100 rounded bg-fit"
-						src="{{siteUrl}}assets/img/logo_telco_prev_ui.png">
+			<div class="col-lg-6">
+				<div class="text-center">
+					<img class="img-fluid mb-3" src="{{siteUrl}}assets/img/logo_telco_prev_ui.png">
+				</div>
+				<div class="text-center text-uppercase">
+					<h1 class="mb-0 fs-1 fw-bold">Telco One Point</h1>
 				</div>
 			</div>
-			<div class="text-center pt-3 fs-sm-2 align-items-center d-flex flex-wrap justify-content-center">
-				<h1 class="fw-bold col-lg-12 header-size text-uppercase">Telco One Point</h1>
-			</div>
-			<div class="row align-items-center p-4">
-				<div class="col-lg-4 col-md-6">
-					<div class="d-flex align-items-center justify-content-center mb-4 mt-2">
-						<div class="bg-colors col-md-6 d-flex align-items-center p-4 w-auto justify-content-center rounded">
-							<i class="fa fa-phone-alt text-white"></i>
-						</div>
-						<div class="ps-4 w-100">
-							<h5 class="mb-2">Call to ask any question</h5>
-							<h4 class="text-colors mb-0">+62 081234567</h4>
-						</div>
+			<div class="col-lg-6">
+				<div class="d-flex justify-content-center mb-4 mt-2">
+					<div class=" bg-colors d-flex align-items-center justify-content-center rounded"
+						style="width: 60px; height: 60px;">
+						<i class="bi bi-telephone-fill text-white"></i>
+					</div>
+					<div class="ps-4 w-50">
+						<h5 class="fw-semi-bold">Call to ask any question</h5>
+						<p class="text-colors mb-0">+62 081234567</p>
 					</div>
 				</div>
-				<div class="col-lg-4 col-md-6">
-					<div class="d-flex align-items-center justify-content-center mb-4 mt-2">
-						<div class="bg-colors d-flex align-items-center p-4 justify-cw-auto ontent-center rounded">
-							<i class="fa fa-regular fa-envelope text-white"></i>
-						</div>
-						<div class="ps-4 w-100">
-							<h5 class="mb-2">Email to get free quote</h5>
-							<h4 class="text-colors mb-0">info@gmail.com</h4>
-						</div>
+				<div class="d-flex justify-content-center mb-4 mt-2">
+					<div class=" bg-colors d-flex align-items-center justify-content-center rounded"
+						style="width: 60px; height: 60px;">
+						<i class="bi bi-envelope-at text-white"></i>
+					</div>
+					<div class="ps-4 w-50">
+						<h5 class="fw-semi-bold">Email to get free quote</h5>
+						<p class="text-colors mb-0">info@gmail.com</p>
 					</div>
 				</div>
-				<div class="col-lg-4 col-md-6">
-					<div class="d-flex align-items-center justify-content-center mb-4 mt-2">
-						<div class="bg-colors d-flex align-items-center p-4 justify-cw-auto ontent-center rounded">
-							<i class="fa fa-sharp fa-regular text-white fa-location-arrow"></i>
-						</div>
-						<div class="ps-4 w-100">
-							<h5 class="mb-2">Location</h5>
-							{# <h4 class="text-colors mb-0 fs-5">Jl Totok Kerot, Dsn. Jatisumber RT01 RW02, Ds.
-								Watesumpak, Kec Trowulan, Kabupaten Mojokerto, Jawa Timur 61362</h4> #}
-							<h4 class="text-colors mb-0 fs-5 pe-auto">
-								<a href="" class="btn btn-primary rounded-3">Liat di map</a>
-							</h4>
-						</div>
+				<div class="d-flex justify-content-center mb-4 mt-2">
+					<div class="bg-colors d-flex align-items-center justify-content-center rounded"
+						style="width: 60px; height: 60px;">
+						<i class="bi bi-geo-alt-fill text-white"></i>
+					</div>
+					<div class="ps-4 w-50">
+						<h5 class="fw-semi-bold">Location</h5>
+						<p class="text-colors mb-0">Jl Totok Kerot, Dsn. Jatisumber RT01 RW02, Ds. Watesumpak, Kec Trowulan,
+							Kabupaten Mojokerto, Jawa Timur 61362</p>
 					</div>
 				</div>
 			</div>
