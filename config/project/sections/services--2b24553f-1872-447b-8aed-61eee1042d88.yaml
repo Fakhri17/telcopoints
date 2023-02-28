@@ -1,0 +1,12 @@
+defaultPlacement: end
+enableVersioning: false
+handle: services
+name: Services
+propagationMethod: all
+siteSettings:
+  fe9a96dd-f659-48a1-9d2c-a7e9df599648: # telcopoints
+    enabledByDefault: true
+    hasUrls: true
+    template: services/_entry
+    uriFormat: 'services/{slug}'
+type: channel

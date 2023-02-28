@@ -1,0 +1,125 @@
+fieldLayouts:
+  dc4a8b42-16a8-4961-bc46-66b140b550e3:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 5f24f9a0-15ff-4180-aabb-77c4f16e73b5
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: c0a53a61-539e-4b33-b008-305a847f5522 # Banner Title
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c5ac8154-5a95-4cb8-a73d-51e6fff1e6df
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 180c8f80-ac1b-46b5-8e03-752ff8b2939f # Banner Subtitle
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: b46dc027-eedc-4ba8-9dc1-3a62951b7821
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            type: craft\fieldlayoutelements\HorizontalRule
+            uid: 3f431d36-679a-407c-950d-ea1ee7c2337b
+            userCondition: null
+          -
+            elementCondition: null
+            fieldUid: 4aaf4e88-ddbe-4464-97d1-b8584a798470 # About Title
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 8e7ccdb9-79cf-46ea-bd4d-bc9bed0abd20
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 92a3fbf6-d9ae-4889-8dc2-d3f1416d7189 # About Summary
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 3b11bc2b-4fed-4af6-9357-67b82d4b1752
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: a3ce68f2-f2b6-46c3-b86e-f8931475ab95 # Service Title
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: fa64d37e-a9a4-4190-9fc1-d70df3bd49d1
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            type: craft\fieldlayoutelements\HorizontalRule
+            uid: 6c81184a-5138-406a-8177-e754879b97db
+            userCondition: null
+          -
+            elementCondition: null
+            fieldUid: c344a05c-b635-4b8d-9afb-cd8f6d336296 # Contact Title
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 330c9392-0747-4c5c-b692-89c703ac4065
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 342433fc-c535-4e7f-bf64-8a3f3c384d54
+        userCondition: null
+handle: homepage
+hasTitleField: false
+name: Homepage
+section: 318a4e37-c35f-4bc5-beb7-7cf71d30a763 # Homepage
+sortOrder: 1
+titleFormat: '{section.name|raw}'
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
