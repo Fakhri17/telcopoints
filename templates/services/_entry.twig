@@ -1,0 +1,44 @@
+{% extends '_layouts/base.twig' %}
+
+{% set sectionList = craft.entries()
+  .section('services')
+  .all()
+%}
+{% set homepage = craft.entries()
+  .section('homepage')
+  .one()
+%}
+
+{% block content %}
+<div class="text-center bg-colors container-fluid bg-header-service d-flex" style="width: 100%">
+  <h1 class="text-white header-service text-align-bottom align-self-end">Service</h1>
+</div>
+<div class="container">
+  <div class="justify-content-center align-center container-fluid services-content d-flex flex-column"
+    style="width: 100%;">
+    <div class="flex-column">
+      <div class="d-flex justify-content-center align-center tw-mx-auto">
+        <img src="https://via.placeholder.com/720x480.png" class="img-fluid rounded" />
+      </div>
+      <div class="justify-content-center align-center mt-5 container">
+        <h1 class="text-uppercase text-center">{{ entry.title }}</h1>
+        <div class="my-5">{{ entry.serviceDetail|raw }}</div>
+      </div>
+    </div>
+  </div>
+  <div class="my-5">
+    {% include "_includes/section_title.twig" with { data: {
+			class: 'text-center mx-auto',
+			title: homepage.serviceTitle,
+			subtitle: 'Our Services',
+		}} only %}
+    {% include "_includes/services_item.twig" with { data : {
+      serviceList: sectionList,
+    }} only %} 
+  </div>
+  
+</div>
+
+
+
+{% endblock %}
