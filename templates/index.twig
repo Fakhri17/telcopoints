@@ -1,5 +1,10 @@
 {% extends '_layouts/base.twig' %}
 
+{% set sectionList = craft.entries()
+	.section('services')
+	.all() 
+%}
+
 {% block content %}
 
 <div class="container-fluid position-relative p-0" id="home">
@@ -9,11 +14,9 @@
 				<div class="w-100 height-banner" style="width: 100vw;" alt="Image"></div>
 				<div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
 					<div class="p-3" style="max-width: 900px;">
-						<h5 class="text-white text-uppercase mb-3">Creative & Innovative</h5>
-						<h1 class="display-1 text-white mb-md-4">Creative & Innovative Digital
-							Solution</h1>
-						<a href="#contact" class="btn btn-outline-light py-md-3 px-md-5">Contact
-							Us</a>
+						<h5 class="text-white text-uppercase mb-3">{{ entry.bannerSubtitle }}</h5>
+						<h1 class="display-1 text-white mb-md-4">{{ entry.bannerTitle }}</h1>
+						<a href="#contact" class="btn btn-outline-light py-md-3 px-md-5">Contact Us</a>
 					</div>
 				</div>
 			</div>
@@ -26,13 +29,12 @@
 	<div class="container py-5">
 		<div class="row">
 			<div class="col-lg-7 col-12">
-				<div class="section-title position-relative pb-3 mb-5">
-					<h5 class="fw-bold header-colors text-uppercase">About Us</h5>
-					<h1 class="mb-0">The Best IT Solution With 10 Years of Experience</h1>
-				</div>
-				<p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum et tempor sit. Aliqu diam
-					amet diam et eos labore. Clita erat ipsum et lorem et sit, sed stet no labore lorem sit. Sanctus
-					clita duo justo et tempor eirmod magna dolore erat amet</p>
+				{% include "_includes/section_title.twig" with { data: {
+					class: '',
+					title: entry.aboutTitle,
+					subtitle: 'About Us',
+				}} only %}
+				<p class="mb-4">{{ entry.aboutSummary|raw }}</p>
 			</div>
 			<div class="col-lg-5 col-12">
 				<div class="text-center">
@@ -52,19 +54,51 @@
 
 
 <!-- Service Start -->
-{% include "_includes/services.twig" %}
+<div class="container-fluid py-5" id="services">
+	<div class="container py-5">
+		{% include "_includes/section_title.twig" with { data: {
+			class: 'text-center mx-auto',
+			title: entry.serviceTitle,
+			subtitle: 'Our Services',
+		}} only %}
+		{% include "_includes/services_item.twig" with { data : {
+			serviceList: sectionList,
+		}} only %} 
+	</div>
+</div>
 <!-- Service End -->
+
+
+{% set phoneNumber = siteInfo.telepon.format('e164') %}
+{% set contactListInfo = [
+	{
+		icon: "bi-telephone-fill",
+		title: "Call to ask any question",
+		data: phoneNumber
+	},
+	{
+		icon: "bi-envelope-at",
+		title: "Email to get free quote",
+		data: siteInfo.email
+	},
+	{
+		icon: "bi-geo-alt-fill",
+		title: "Location",
+		data: siteInfo.location
+	}
+] %}
 
 
 <!-- Contact us Start -->
 <div class="container-fluid py-5" id="contact">
 	<div class="container py-5">
+		{% include "_includes/section_title.twig" with { data: {
+			class: 'text-center mx-auto',
+			title: entry.contactTitle,
+			subtitle: 'Contact Us',
+		}} only %}
 		<div class="row">
-			<div class="section-title position-relative pb-3 mb-5 text-center justify-content-center">
-				<h3 class="fw-bold header-colors text-uppercase">Contact Us</h3>
-				<h5 class="fw-bold text-uppercase">If You Have Any Query, Feel Free To Contact Us</h5>
-			</div>
-			<div class="col-lg-6">
+			<div class="col-lg-6 mb-5 mb-lg-0">
 				<div class="text-center">
 					<img class="img-fluid mb-3" src="{{siteUrl}}assets/img/logo_telco_prev_ui.png">
 				</div>
@@ -73,37 +107,18 @@
 				</div>
 			</div>
 			<div class="col-lg-6">
-				<div class="d-flex justify-content-center mb-4 mt-2">
-					<div class=" bg-colors d-flex align-items-center justify-content-center rounded"
-						style="width: 60px; height: 60px;">
-						<i class="bi bi-telephone-fill text-white"></i>
+				{% for item in contactListInfo %}
+					<div class="d-flex mb-4 mt-2">
+						<div class=" bg-colors d-flex align-items-center justify-content-center rounded-3"
+							style="width: 60px; height: 60px;">
+							<i class="{{ item.icon }} text-white fs-4 p-5"></i>
+						</div>
+						<div class="ps-4">
+							<h4 class="fw-semi-bold">{{ item.title }}</h4>
+							<p class="text-colors mb-0 h5 fw-medium">{{ item.data }}</p>
+						</div>
 					</div>
-					<div class="ps-4 w-50">
-						<h5 class="fw-semi-bold">Call to ask any question</h5>
-						<p class="text-colors mb-0">+62 081234567</p>
-					</div>
-				</div>
-				<div class="d-flex justify-content-center mb-4 mt-2">
-					<div class=" bg-colors d-flex align-items-center justify-content-center rounded"
-						style="width: 60px; height: 60px;">
-						<i class="bi bi-envelope-at text-white"></i>
-					</div>
-					<div class="ps-4 w-50">
-						<h5 class="fw-semi-bold">Email to get free quote</h5>
-						<p class="text-colors mb-0">info@gmail.com</p>
-					</div>
-				</div>
-				<div class="d-flex justify-content-center mb-4 mt-2">
-					<div class="bg-colors d-flex align-items-center justify-content-center rounded"
-						style="width: 60px; height: 60px;">
-						<i class="bi bi-geo-alt-fill text-white"></i>
-					</div>
-					<div class="ps-4 w-50">
-						<h5 class="fw-semi-bold">Location</h5>
-						<p class="text-colors mb-0">Jl Totok Kerot, Dsn. Jatisumber RT01 RW02, Ds. Watesumpak, Kec Trowulan,
-							Kabupaten Mojokerto, Jawa Timur 61362</p>
-					</div>
-				</div>
+				{% endfor %}
 			</div>
 		</div>
 	</div>

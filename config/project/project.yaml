@@ -1,17 +1,74 @@
-<<<<<<< HEAD
-dateModified: 1676536607
-=======
-dateModified: 1676510513
->>>>>>> 572e88cf62023106f7308b43b0c15f80116edad9
+dateModified: 1677578125
 email:
   fromEmail: admin@gmail.com
   fromName: telcopoints
   transportType: craft\mail\transportadapters\Sendmail
 meta:
   __names__:
+    2b24553f-1872-447b-8aed-61eee1042d88: Services # Services
+    3b07d49a-87c6-4b78-bc48-577df5b541b1: 'Site Info' # Site Info
+    4aaf4e88-ddbe-4464-97d1-b8584a798470: 'About Title' # About Title
     5f9b6819-1692-464d-adb5-8974c35e9d03: telcopoints # telcopoints
+    06a06068-1d8c-4bab-9382-e1d438cabdb2: Telepon # Telepon
+    9f17022c-98b5-4b7f-8278-52ebb29aca4b: Email # Email
+    92a3fbf6-d9ae-4889-8dc2-d3f1416d7189: 'About Summary' # About Summary
+    180c8f80-ac1b-46b5-8e03-752ff8b2939f: 'Banner Subtitle' # Banner Subtitle
+    318a4e37-c35f-4bc5-beb7-7cf71d30a763: Homepage # Homepage
+    63281a68-a9f3-418f-8368-6a040a05d158: 'Service Subtitle' # Service Subtitle
+    a3ce68f2-f2b6-46c3-b86e-f8931475ab95: 'Service Title' # Service Title
+    be079f46-202c-4c2d-b2ad-72a779a6f12c: Default # Default
+    c0a53a61-539e-4b33-b008-305a847f5522: 'Banner Title' # Banner Title
+    c344a05c-b635-4b8d-9afb-cd8f6d336296: 'Contact Title' # Contact Title
     ca8c6a64-a648-4dcf-9b70-f800be9f3459: Common # Common
+    dbe3a1c2-d10e-4d15-88d1-22699518c4e3: 'Service Detail' # Service Detail
+    ee1cc963-f8d5-4b4c-a04c-2c2ad4d9aab7: Homepage # Homepage
+    fb57d25d-a8ae-4523-906e-0f7dbdbd9d6d: Location # Location
     fe9a96dd-f659-48a1-9d2c-a7e9df599648: telcopoints # telcopoints
+plugins:
+  dumper:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  environment-label:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+    settings:
+      labelColor: ''
+      labelText: dev
+      prefixText: null
+      showLabel: true
+      suffixText: null
+      targetSelector: '#global-header:before'
+      textColor: ''
+  phone-number:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  redactor:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.3.0
+  retcon:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  seomate:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  super-table:
+    edition: standard
+    enabled: true
+    schemaVersion: 3.0.0
+  typedlinkfield:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.0.0
+  wordsmith:
+    edition: standard
+    enabled: true
+    schemaVersion: 0.0.0.0
 system:
   edition: solo
   live: true

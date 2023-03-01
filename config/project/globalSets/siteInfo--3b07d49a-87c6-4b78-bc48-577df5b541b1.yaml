@@ -1,0 +1,48 @@
+fieldLayouts:
+  3f2eb080-8a76-4444-b33a-a334e33d8648:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 06a06068-1d8c-4bab-9382-e1d438cabdb2 # Telepon
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 5496d3b0-1f85-4ae9-b641-dd9d46860f30
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 9f17022c-98b5-4b7f-8278-52ebb29aca4b # Email
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: f2b88f7f-1c1d-4af0-8e55-4cba9e1314df
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: fb57d25d-a8ae-4523-906e-0f7dbdbd9d6d # Location
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: b5054479-5f14-46a8-b740-686a748584e8
+            userCondition: null
+            warning: null
+            width: 100
+        name: Info
+        uid: cf14de46-4a59-4ed7-820a-a1e3dcf765f6
+        userCondition: null
+handle: siteInfo
+name: 'Site Info'
+sortOrder: 1
