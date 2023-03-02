@@ -1,0 +1,27 @@
+columnSuffix: teplctjx
+contentColumnType: text
+fieldGroup: ca8c6a64-a648-4dcf-9b70-f800be9f3459 # Common
+handle: serviceDetail
+instructions: null
+name: 'Service Detail'
+searchable: false
+settings:
+  availableTransforms: ''
+  availableVolumes: ''
+  columnType: text
+  configSelectionMode: choose
+  defaultTransform: ''
+  manualConfig: ''
+  purifierConfig: null
+  purifyHtml: true
+  redactorConfig: Simple.json
+  removeEmptyTags: false
+  removeInlineStyles: false
+  removeNbsp: false
+  showHtmlButtonForNonAdmins: false
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: false
+  uiMode: enlarged
+translationKeyFormat: null
+translationMethod: none
+type: craft\redactor\Field

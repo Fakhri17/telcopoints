@@ -1,0 +1,12 @@
+columnSuffix: dbdlftgi
+contentColumnType: string
+fieldGroup: ca8c6a64-a648-4dcf-9b70-f800be9f3459 # Common
+handle: telepon
+instructions: null
+name: Telepon
+searchable: false
+settings:
+  defaultRegion: ID
+translationKeyFormat: null
+translationMethod: none
+type: rynpsc\phonenumber\fields\PhoneNumberField

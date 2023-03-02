@@ -1,6 +1,15 @@
 {
   "require": {
     "craftcms/cms": "^4.3.5",
+    "craftcms/redactor": "3.0.3",
+    "mmikkel/retcon": "2.6.1",
+    "rynpsc/craft-phone-number": "2.1.0",
+    "sebastianlenz/linkfield": "2.1.5",
+    "studioespresso/craft-dumper": "3.0.1",
+    "topshelfcraft/environment-label": "4.0.2",
+    "topshelfcraft/wordsmith": "4.2.0",
+    "vaersaagod/seomate": "2.1.0",
+    "verbb/super-table": "3.0.7",
     "vlucas/phpdotenv": "^5.4.0"
   },
   "require-dev": {
