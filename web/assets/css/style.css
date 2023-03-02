@@ -203,8 +203,3 @@ html,body{ scroll-behavior: smooth}
 .services-content {
     margin-top: 60px;
 }
-
-.img-content-services {
-    border-radius: 8px;
-    align-items: center;
-}
