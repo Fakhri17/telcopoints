@@ -5,6 +5,8 @@
 	.all() 
 %}
 
+
+
 {% block content %}
 
 <div class="container-fluid position-relative p-0" id="home">
@@ -13,10 +15,10 @@
 			<div class="carousel-item active">
 				<div class="w-100 height-banner" style="width: 100vw;" alt="Image"></div>
 				<div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
-					<div class="p-3" style="max-width: 900px;">
+					<div class="p-3 animate__animated animate__backInDown animate__delay-1s" style="max-width: 900px;">
 						<h5 class="text-white text-uppercase mb-3">{{ entry.bannerSubtitle }}</h5>
 						<h1 class="display-1 text-white mb-md-4">{{ entry.bannerTitle }}</h1>
-						<a href="#contact" class="btn btn-outline-light py-md-3 px-md-5">Contact Us</a>
+						<a href="#contact" class="btn btn-outline-light py-md-3 px-md-5 animate__animated animate__fadeIn">Contact Us</a>
 					</div>
 				</div>
 			</div>
@@ -25,7 +27,7 @@
 	</div>
 </div>
 
-<div class="container-fluid py-5" id="about">
+<div class="container-fluid py-5 animate__animated animate__fadeInLeftBig animate__delay-2s" id="about">
 	<div class="container py-5">
 		<div class="row">
 			<div class="col-lg-7 col-12">
@@ -99,16 +101,16 @@
 		}} only %}
 		<div class="row">
 			<div class="col-lg-6 mb-5 mb-lg-0">
-				<div class="text-center">
+				<div class="text-center animate__fadeInUp animate__animated animate__delay-4s">
 					<img class="img-fluid mb-3" src="{{siteUrl}}assets/img/logo_telco_prev_ui.png">
 				</div>
-				<div class="text-center text-uppercase">
+				<div class="text-center text-uppercase animate__fadeInUp animate__animated animate__delay-4s">
 					<h1 class="mb-0 fs-1 fw-bold">Telco One Point</h1>
 				</div>
 			</div>
 			<div class="col-lg-6">
-				{% for item in contactListInfo %}
-					<div class="d-flex mb-4 mt-2">
+				{% for key, item in contactListInfo %}
+					<div class="d-flex mb-4 mt-2 animate__fadeInUp animate__animated animate__delay-{{ key + 1 }}s">
 						<div class=" bg-colors d-flex align-items-center justify-content-center rounded-3"
 							style="width: 60px; height: 60px;">
 							<i class="{{ item.icon }} text-white fs-4 p-5"></i>
