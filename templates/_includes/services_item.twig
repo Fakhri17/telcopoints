@@ -3,10 +3,10 @@
   serviceList: [],
 }|merge(data ?? {}) %}
 
-<div class="row g-5">
+<div class="row g-5 overflow-hidden">
 	{% for key, item in data.serviceList %}
-		<div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-			<div class="card rounded-5 animate__animated animate__fadeIn animate__delay-{{ key + 1 }}s">
+		<div class="col-lg-4 col-md-6 d-flex align-items-stretch animate__animated animate__fadeInUp animate__delay-{{ key + 1 }}s">
+			<div class="card rounded-5">
 				<div class="card-body bg-colors text-white py-5 px-4 rounded-5">
 					<div class="card-title h3 text-white text-center fw-bold">{{ item.title }}</div>
 					<div class="card-text text-white mb-4 ">{{ item.serviceSubtitle }}</div>

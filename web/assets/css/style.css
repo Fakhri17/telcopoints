@@ -5,6 +5,8 @@ body {
 
 :root {
   --primary: #64c191 !important;
+  height: 100%;
+  
   /* --secondary: #34AD54;
     --light: #EEF9FF;
     --dark: #091E3E; */
@@ -15,15 +17,16 @@ body {
   --animate-duration: 6s;
 } */
 
-.animate__animated.animate__fadeIn {
-  --animate-duration: 3s;
-}
 /* Animate css end */
 
 /* body background */
 body {
-  background-color: #f7f6f6;
+  position: relative;
+  overflow-y: visible;
+  overflow-x: hidden;
+  height: 100%;
 }
+
 
 /* body background end */
 
