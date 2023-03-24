@@ -6,7 +6,7 @@ body {
 :root {
   --primary: #64c191 !important;
   height: 100%;
-  
+
   /* --secondary: #34AD54;
     --light: #EEF9FF;
     --dark: #091E3E; */
@@ -26,7 +26,6 @@ body {
   overflow-x: hidden;
   height: 100%;
 }
-
 
 /* body background end */
 
