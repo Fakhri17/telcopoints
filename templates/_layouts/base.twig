@@ -26,7 +26,6 @@
   <!-- Libraries Stylesheet -->
   <link href="{{siteUrl}}theme/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
   <link href="{{siteUrl}}theme/lib/animate/animate.min.css" rel="stylesheet">
-
   <!-- Customized Bootstrap Stylesheet -->
   <link href="{{siteUrl}}theme/css/bootstrap.min.css" rel="stylesheet">
 
@@ -34,11 +33,9 @@
   <link href="{{siteUrl}}theme/css/style.css" rel="stylesheet">
   <link href="{{siteUrl}}assets/css/style.css" rel="stylesheet">
 
-  {# Animate CSS #}
-   <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-  />
+  {# Aos CSS #}
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+   
 </head>
 
 <body>
@@ -65,9 +62,12 @@
   <script src="{{ siteUrl }}theme/lib/counterup/counterup.min.js"></script>
   <script src="{{ siteUrl }}theme/lib/owlcarousel/owl.carousel.min.js"></script>
 
+  {# AOS CSS #}
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 
-  <!-- AlpineJs -->
-  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
   <!-- Template Javascript -->
   <script src="{{ siteUrl }}theme/js/main.js"></script>
