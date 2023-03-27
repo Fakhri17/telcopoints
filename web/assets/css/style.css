@@ -29,6 +29,10 @@ body {
 
 /* body background end */
 
+.anchor {
+  color: white !important;
+}
+
 /* Header*/
 .header-colors {
   color: var(--primary);
@@ -121,6 +125,11 @@ body {
   color: #0c944e;
 }
 
+.footer-media {
+  display: grid !important;
+  /* margin-top: 18px !important; */
+}
+
 @media (max-width: 991.98px) {
   .sticky-top.navbar-dark {
     position: relative;
@@ -161,6 +170,11 @@ body {
 
   .header-size {
     font-size: 100px;
+  }
+
+  .footer-media {
+    display: flex !important;
+    /* margin-top: 18px !important; */
   }
 }
 
