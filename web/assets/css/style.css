@@ -43,6 +43,15 @@ body {
 }
 /* Header end*/
 
+/* Partners */
+.partner-section {
+  display: grid !important;
+  /* height: 900px; */
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+/* Partners end */
+
 /* background-logo colors*/
 .bg-colors {
   background-color: var(--primary);
@@ -176,6 +185,12 @@ body {
     display: flex !important;
     /* margin-top: 18px !important; */
   }
+
+  /* Partners */
+  .partner-section {
+    display: flex !important;
+  }
+  /* Partners end */
 }
 
 .rounded-5 {
@@ -206,7 +221,17 @@ body {
   .header-service {
     margin-bottom: 35px !important;
   }
-  /* Enx */
+  /* End */
+
+  /* Partners */
+  .partner-section {
+    /* display: flex !important; */
+    height: 500px;
+    justify-content: center;
+    text-align: center;
+    margin-top: 40px;
+  }
+  /* Partners end */
 }
 
 /* Services page */
