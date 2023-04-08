@@ -1,41 +1,29 @@
 {% extends '_layouts/base.twig' %}
 
 {% set sectionList = craft.entries()
-.section('services')
-.all()
+  .section('services')
+  .all()
 %}
 {% set homepage = craft.entries()
-.section('homepage')
-.one()
+  .section('homepage')
+  .one()
 %}
 
 {% css %}
-.breadcrumb-item+.breadcrumb-item::before {
-  float: left;
-  padding-right: .5rem;
-  color: #fff;
-  content: var(--bs-breadcrumb-divider, ">") /* rtl: var(--bs-breadcrumb-divider, ">") */;
-}
+  .breadcrumb-item+.breadcrumb-item::before {
+    float: left;
+    padding-right: .5rem;
+    color: #fff;
+    content: var(--bs-breadcrumb-divider, ">") /* rtl: var(--bs-breadcrumb-divider, ">") */;
+  }
 {% endcss %}
 
 {% block content %}
-<div class="p-5 text-center bg-colors h-50">
-  <div class="container h-100">
-    <div class="row align-items-center h-100">
-      <div class="col-8 mx-auto">
-        <div class="jumbotron">
-         <h2 class="text-white fw-bold mb-3">{{ entry.title }}</h2>
-         <nav aria-label="breadcrumb">
-          <ol class="breadcrumb justify-content-center">
-            <li class="breadcrumb-item"><a href="{{ url('/')}}" class="text-white">Home</a></li>
-            <li class="breadcrumb-item text-white text-decoration-underline" aria-current="page">Services</li>
-          </ol>
-        </nav>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+
+{% include "_includes/breadcrumb.twig" with { data: {
+  title: entry.title,
+  subtitle: 'Services',
+}} %}
 <div class="container">
   <div class="justify-content-center align-center container-fluid services-content d-flex flex-column"
     style="width: 100%;">
@@ -52,12 +40,12 @@
   </div>
   <div class="my-5">
     {% include "_includes/section_title.twig" with { data: {
-    class: 'text-center mx-auto',
-    title: homepage.serviceTitle,
-    subtitle: 'Our Services',
+      class: 'text-center mx-auto',
+      title: homepage.serviceTitle,
+      subtitle: 'Our Services',
     }} only %}
     {% include "_includes/services_item.twig" with { data : {
-    serviceList: sectionList,
+      serviceList: sectionList,
     }} only %}
   </div>
 
