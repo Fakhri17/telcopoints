@@ -251,3 +251,7 @@ body {
 .services-content {
   margin-top: 60px;
 }
+
+.cursor-pointer {
+  cursor: pointer;
+}
