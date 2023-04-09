@@ -31,7 +31,7 @@
 <div class="container-fluid py-5" id="about">
 	<div class="container py-5">
 		<div class="row">
-			<div class="col-lg-7 col-12" data-aos="fade-right" data-aos-duration="2000" data-aos-easing="ease-in-out" data-aos-once="true">
+			<div class="col-lg-7 col-12" data-aos="fade-right" data-aos-easing="ease-in-out" data-aos-once="true">
 				{% include "_includes/section_title.twig" with { data: {
 					class: 'animate__animated animate__fadeInUp',
 					title: entry.aboutTitle,
@@ -39,7 +39,7 @@
 				}} only %}
 				<p class="mb-4">{{ entry.aboutSummary|raw }}</p>
 			</div>
-			<div class="col-lg-5 col-12" data-aos="fade-left" data-aos-duration="2000" data-aos-easing="ease-in-out" data-aos-once="true">
+			<div class="col-lg-5 col-12" data-aos="fade-left" data-aos-easing="ease-in-out" data-aos-once="true">
 				<div class="text-center">
 					<img class="img-fluid mb-3" src="{{siteUrl}}assets/img/logo_telco_prev_ui.png">
 				</div>
@@ -58,38 +58,21 @@
 
 <!-- Service Start -->
 <div class="container-fluid py-5" id="services">
-	<div class="container py-5" data-aos="fade-down" data-aos-duration="2000" data-aos-easing="ease-in-out" data-aos-once="true">
-		{% include "_includes/section_title.twig" with { data: {
-			class: 'text-center mx-auto',
-			title: entry.serviceTitle,
-			subtitle: 'Our Services',
-		}} only %}
+	<div class="container py-5">
+		<div  data-aos="fade-down" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-once="true">
+			{% include "_includes/section_title.twig" with { data: {
+				class: 'text-center mx-auto',
+				title: entry.serviceTitle,
+				subtitle: 'Our Services',
+			}} only %}
+		</div>
+		
 		{% include "_includes/services_item.twig" with { data : {
 			serviceList: sectionList,
 		}} only %} 
 	</div>
 </div>
 <!-- Service End -->
-
-
-{% set phoneNumber = siteInfo.telepon.format('e164') %}
-{% set contactListInfo = [
-	{
-		icon: "bi-telephone-fill",
-		title: "Call to ask any question",
-		data: phoneNumber
-	},
-	{
-		icon: "bi-envelope-at",
-		title: "Email to get free quote",
-		data: siteInfo.email
-	},
-	{
-		icon: "bi-geo-alt-fill",
-		title: "Location",
-		data: siteInfo.location
-	}
-] %}
 
 
 <!-- Partner Section Start -->
@@ -127,10 +110,30 @@
 </div>
 <!-- Partner Section End -->
 
+
+{% set phoneNumber = siteInfo.telepon.format('e164') %}
+{% set contactListInfo = [
+	{
+		icon: "bi-telephone-fill",
+		title: "Call to ask any question",
+		data: phoneNumber
+	},
+	{
+		icon: "bi-envelope-at",
+		title: "Email to get free quote",
+		data: siteInfo.email
+	},
+	{
+		icon: "bi-geo-alt-fill",
+		title: "Location",
+		data: siteInfo.location
+	}
+] %}
+
 <!-- Contact us Start -->
 <div class="container-fluid py-5" id="contact">
 	<div class="container py-5">
-		<div data-aos="fade-down" data-aos-duration="2000" data-aos-easing="ease-in-out" data-aos-once="true">
+		<div data-aos="fade-down" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-once="true">
 		{% include "_includes/section_title.twig" with { data: {
 			class: 'text-center mx-auto',
 			title: entry.contactTitle,
@@ -139,16 +142,16 @@
 		</div>
 		<div class="row">
 			<div class="col-lg-6 mb-5 mb-lg-0">
-				<div class="text-center" data-aos="fade-down" data-aos-duration="2000" data-aos-easing="ease-in-out" data-aos-once="true">
+				<div class="text-center" data-aos="fade-down" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-once="true">
 					<img class="img-fluid mb-3" src="{{siteUrl}}assets/img/logo_telco_prev_ui.png">
 				</div>
-				<div class="text-center text-uppercase" data-aos="fade-up" data-aos-duration="2000" data-aos-easing="ease-in-out" data-aos-once="true">
+				<div class="text-center text-uppercase" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-once="true">
 					<h1 class="mb-0 fs-1 fw-bold">Telco One Point</h1>
 				</div>
 			</div>
 			<div class="col-lg-6">
 				{% for key, item in contactListInfo %}
-					<div class="d-flex mb-4 mt-2" data-aos="fade-up" data-aos-duration="{{ key + 1 }}000" data-aos-easing="ease-in-out" data-aos-once="true">
+					<div class="d-flex mb-4 mt-2" data-aos="fade-up" data-aos-duration="{{ 500 * (key + 1) }}" data-aos-easing="ease-in-out" data-aos-once="true">
 						<div class=" bg-colors d-flex align-items-center justify-content-center rounded-3"
 							style="width: 60px; height: 60px;">
 							<i class="{{ item.icon }} text-white fs-4 p-5"></i>
