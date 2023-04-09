@@ -1,4 +1,4 @@
-dateModified: 1680968291
+dateModified: 1681008535
 email:
   fromEmail: admin@gmail.com
   fromName: telcopoints
@@ -12,9 +12,12 @@ meta:
     5f9b6819-1692-464d-adb5-8974c35e9d03: telcopoints # telcopoints
     06a06068-1d8c-4bab-9382-e1d438cabdb2: Telepon # Telepon
     9f17022c-98b5-4b7f-8278-52ebb29aca4b: Email # Email
+    80aebd22-1664-4677-95ba-ddf7c873d8d1: Navigation # Navigation
     92a3fbf6-d9ae-4889-8dc2-d3f1416d7189: 'About Summary' # About Summary
     180c8f80-ac1b-46b5-8e03-752ff8b2939f: 'Banner Subtitle' # Banner Subtitle
     318a4e37-c35f-4bc5-beb7-7cf71d30a763: Homepage # Homepage
+    584f34f7-6c69-4ed5-82e5-6d5357a310ec: Footer # Footer
+    623ba065-0810-4e4b-8d19-8801981fe094: Navigation # Navigation
     63281a68-a9f3-418f-8368-6a040a05d158: 'Service Subtitle' # Service Subtitle
     a3ce68f2-f2b6-46c3-b86e-f8931475ab95: 'Service Title' # Service Title
     be079f46-202c-4c2d-b2ad-72a779a6f12c: Default # Default
@@ -76,7 +79,7 @@ system:
   edition: solo
   live: true
   name: telcopoints
-  schemaVersion: 4.0.0.9
+  schemaVersion: 4.4.0.4
   timeZone: America/Los_Angeles
 users:
   allowPublicRegistration: false
