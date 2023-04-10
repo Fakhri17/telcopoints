@@ -3,15 +3,15 @@
   serviceList: [],
 }|merge(data ?? {}) %}
 {# data-aos-delay="{{ key + 2 }}000" #}
-<div class="row g-5 overflow-hidden">
+<div class="row g-5 overflow-hidden justify-content-center">
 	{% for key, item in data.serviceList %}
-		<div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-once="true" data-aos-duration="{{ key + 5 }}00" >
+		<div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-once="true" data-aos-duration="{{ 500 + ((key + 1) * 100) }}" >
 			<div class="card rounded-5">
-				<div class="card-body bg-colors text-white py-5 px-4 rounded-5">
+				<div class="card-body bg-services text-white py-5 px-4 rounded-5">
 					<div class="card-title h3 text-white text-center fw-bold">{{ item.title }}</div>
 					<div class="card-text text-white mb-4 ">{{ item.serviceSubtitle }}</div>
-					<div class="text-center">
-						<a href="{{ url('/services/' ~ item.slug ) }}" class="btn btn-outline-light">Lihat Detail</a>
+					<div class="text-center text-white">
+						<a href="{{ url('/services/' ~ item.slug ) }}" class="text-white btn btn-outline-light btn-detail" style="btn-detail">Lihat Detail</a>
 					</div>
 				</div>
 			</div>

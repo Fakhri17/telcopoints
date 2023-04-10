@@ -27,6 +27,14 @@ body {
   height: 100%;
 }
 
+.text-telco-green {
+  color: var(--primary);
+}
+
+.text-telco-blue{
+  color: #0077c2;
+}
+
 /* body background end */
 
 .anchor {
@@ -43,11 +51,39 @@ body {
 }
 /* Header end*/
 
+/* Partners */
+.partner-section {
+  display: grid !important;
+  /* height: 900px; */
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+/* Partners end */
+
 /* background-logo colors*/
 .bg-colors {
   background-color: var(--primary);
 }
 /* background-logo colors end*/
+
+/* Background component services */
+.bg-services {
+  background-color: var(--primary);
+}
+
+.bg-footer {
+  background-color: #408faa;
+}
+
+.btn-detail:hover {
+  color: black;
+}
+
+.text-services {
+  color: var(--primary);
+}
+
+/* Background component services end */
 
 /*** Carousel ***/
 .carousel-caption {
@@ -55,7 +91,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background: var(--primary);
+  background: #0077c2;
   z-index: 1;
 }
 /*** Carousel End ***/
@@ -176,6 +212,12 @@ body {
     display: flex !important;
     /* margin-top: 18px !important; */
   }
+
+  /* Partners */
+  .partner-section {
+    display: flex !important;
+  }
+  /* Partners end */
 }
 
 .rounded-5 {
@@ -206,7 +248,17 @@ body {
   .header-service {
     margin-bottom: 35px !important;
   }
-  /* Enx */
+  /* End */
+
+  /* Partners */
+  .partner-section {
+    /* display: flex !important; */
+    height: 500px;
+    justify-content: center;
+    text-align: center;
+    margin-top: 40px;
+  }
+  /* Partners end */
 }
 
 /* Services page */
@@ -225,4 +277,14 @@ body {
 
 .services-content {
   margin-top: 60px;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+
+.back-to-top:hover{
+  color: #fff;
+
 }
