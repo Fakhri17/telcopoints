@@ -56,6 +56,13 @@
 
 
 <!-- Service Start -->
+<div class="container-fluid py-5" id="services" style="background-color:">
+	<div class="container py-5" data-aos="fade-down" data-aos-duration="2000" data-aos-easing="ease-in-out" data-aos-once="true">
+		{% include "_includes/section_title.twig" with { data: {
+			class: 'text-center mx-auto',
+			title: entry.serviceTitle,
+			subtitle: 'Our Services',
+		}} only %}
 <div class="container-fluid py-5" id="services">
 	<div class="container py-5">
 		<div  data-aos="fade-down" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-once="true">
@@ -82,7 +89,7 @@
 				Our Partners
 			</h4>
 		</div>
-		<div class="owl-carousel vendor-carousel my-5 cursor-pointer">
+		<div class="owl-carousel vendor-carousel align-items-center my-5 cursor-pointer">
 			<div>
 				<img src="https://im3-img.indosatooredoo.com/iohassets/images/icons/logo-ioh.svg"/>
 			</div>	

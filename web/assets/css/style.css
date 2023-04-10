@@ -58,13 +58,32 @@ body {
 }
 /* background-logo colors end*/
 
+/* Background component services */
+.bg-services {
+  background-color: var(--primary);
+}
+
+.bg-footer {
+  background-color: #408faa;
+}
+
+.btn-detail:hover {
+  color: black;
+}
+
+.text-services {
+  color: var(--primary);
+}
+
+/* Background component services end */
+
 /*** Carousel ***/
 .carousel-caption {
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: var(--primary);
+  background: #0077c2;
   z-index: 1;
 }
 /*** Carousel End ***/
