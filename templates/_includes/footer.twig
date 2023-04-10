@@ -1,12 +1,27 @@
 <!-- Footer Start -->
 <div class="text-white bg-footer">
 	<div class="container text-start p-4" data-aos="fade-down" data-aos-duration="1500" data-aos-easing="ease-in-out" data-aos-once="true">
+
+{% set navigation = craft.entries()
+	.section('navigation')
+	.with([
+		'footer',
+	])
+	.all() 
+%}
+
+<div class="text-white bg-colors">
+	<div class="container text-start p-4">
 		<div class="d-md-flex d-sm-grid justify-content-between fs-6 align-items-center footer-media">
 			<div class="flex-column fs-5">
 				<div>
-					<a href="#" class="anchor">Terms & Conditions</a> 
-					<span class="border-end mx-2"></span> 
-					<a href="#" class="anchor">Privacy Policy</a>
+					{% for item in navigation[0].footer %}
+						<a href="{{ item.url }}" class="anchor">{{ item.title }}</a>
+						{% if not loop.last %}
+							<span class="border-end mx-2"></span> 
+						{% endif %} 
+					{% endfor %}
+					
 				</div>
 				<hr />
 				<div class="d-flex align-items-center justify-content-center" >

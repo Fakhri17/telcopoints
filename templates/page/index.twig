@@ -1,0 +1,6 @@
+{% set page = craft.entries()
+  .section('page')
+  .one() 
+%}
+
+{% redirect(page.url) %}

@@ -1,0 +1,17 @@
+{% extends "_layouts/base.twig" %}
+
+
+{% block content %}
+  {% include "_includes/breadcrumb.twig" with { data: {
+    title: entry.title,
+    subtitle: 'Services',
+  }} %}
+
+  <section class="my-5">
+    <div class="container">
+      <div>
+        {{ entry.body|raw }}
+      </div>
+    </div>
+  </section>
+{% endblock content %}
