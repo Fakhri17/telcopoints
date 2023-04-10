@@ -15,10 +15,9 @@
 			<div class="carousel-item active">
 				<div class="w-100 height-banner" style="width: 100vw;" alt="Image"></div>
 				<div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
-					<div class="p-3" data-aos="fade-down" data-aos-duration="1000"
-					 data-aos-easing="ease-in-out" data-aos-once="true" style="max-width: 1000px;">
-						<h5 class="text-white text-uppercase mb-3">{{ entry.bannerSubtitle }}</h5>
-						<h1 class="display-4 text-white mb-md-4">{{ entry.bannerTitle }}</h1>
+					<div class="p-3" style="max-width: 1000px;">
+						<h5 data-aos="fade-down" data-aos-once="true" class="text-white text-uppercase mb-3">{{ entry.bannerSubtitle }}</h5>
+						<h1 data-aos="fade-up" data-aos-once="true" class="display-4 text-white mb-md-4">{{ entry.bannerTitle }}</h1>
 					</div>
 				</div>
 			</div>
@@ -56,16 +55,9 @@
 
 
 <!-- Service Start -->
-<div class="container-fluid py-5" id="services" style="background-color:">
-	<div class="container py-5" data-aos="fade-down" data-aos-duration="2000" data-aos-easing="ease-in-out" data-aos-once="true">
-		{% include "_includes/section_title.twig" with { data: {
-			class: 'text-center mx-auto',
-			title: entry.serviceTitle,
-			subtitle: 'Our Services',
-		}} only %}
 <div class="container-fluid py-5" id="services">
 	<div class="container py-5">
-		<div  data-aos="fade-down" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-once="true">
+		<div data-aos="fade-down" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-once="true">
 			{% include "_includes/section_title.twig" with { data: {
 				class: 'text-center mx-auto',
 				title: entry.serviceTitle,
@@ -85,11 +77,11 @@
 <div class="container-fluid py-5">
 	<div class="container">
 		<div class="mx-auto text-center text-uppercase">
-			<h4 class="fw-bold header-colors">
+			<h4 data-aos="fade-down" data-aos-once="true" class="fw-bold header-colors">
 				Our Partners
 			</h4>
 		</div>
-		<div class="owl-carousel vendor-carousel align-items-center my-5 cursor-pointer">
+		<div data-aos="fade-up" data-aos-once="true" class="owl-carousel vendor-carousel align-items-center my-5 cursor-pointer">
 			<div>
 				<img src="https://im3-img.indosatooredoo.com/iohassets/images/icons/logo-ioh.svg"/>
 			</div>	
@@ -147,11 +139,11 @@
 		}} only %}
 		</div>
 		<div class="row">
-			<div class="col-lg-6 mb-5 mb-lg-0">
-				<div class="text-center" data-aos="fade-down" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-once="true">
+			<div class="col-lg-6 mb-5 mb-lg-0" data-aos="fade-down" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-once="true">
+				<div class="text-center" >
 					<img class="img-fluid mb-3" src="{{siteUrl}}assets/img/logo_telco_prev_ui.png">
 				</div>
-				<div class="text-center text-uppercase" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-once="true">
+				<div class="text-center text-uppercase">
 					<h1 class="mb-0 fs-1 fw-bold">Telco One Point</h1>
 				</div>
 			</div>

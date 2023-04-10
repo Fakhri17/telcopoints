@@ -27,6 +27,14 @@ body {
   height: 100%;
 }
 
+.text-telco-green {
+  color: var(--primary);
+}
+
+.text-telco-blue{
+  color: #0077c2;
+}
+
 /* body background end */
 
 .anchor {
@@ -273,4 +281,10 @@ body {
 
 .cursor-pointer {
   cursor: pointer;
+}
+
+
+.back-to-top:hover{
+  color: #fff;
+
 }
