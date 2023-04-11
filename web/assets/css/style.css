@@ -31,7 +31,7 @@ body {
   color: var(--primary);
 }
 
-.text-telco-blue{
+.text-telco-blue {
   color: #0077c2;
 }
 
@@ -73,6 +73,10 @@ body {
 
 .bg-footer {
   background-color: #408faa;
+}
+
+.header-partners {
+  color: #abcc0a;
 }
 
 .btn-detail:hover {
@@ -283,8 +287,6 @@ body {
   cursor: pointer;
 }
 
-
-.back-to-top:hover{
+.back-to-top:hover {
   color: #fff;
-
 }
