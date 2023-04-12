@@ -80,7 +80,8 @@ body {
 }
 
 .header-partners {
-  color: #abcc0a;
+  color: white;
+  padding: 50px;
 }
 
 .btn-detail:hover {
