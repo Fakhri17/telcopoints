@@ -75,6 +75,10 @@ body {
   background-color: #408faa;
 }
 
+.bg-breadcrumb {
+  background-color: #0077c2;
+}
+
 .header-partners {
   color: #abcc0a;
 }
