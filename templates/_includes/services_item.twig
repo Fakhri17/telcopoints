@@ -3,9 +3,9 @@
   serviceList: [],
 }|merge(data ?? {}) %}
 {# data-aos-delay="{{ key + 2 }}000" #}
-<div class="row g-5 overflow-hidden justify-content-center">
+<div class="row overflow-hidden justify-content-center">
 	{% for key, item in data.serviceList %}
-		<div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-once="true" data-aos-duration="{{ 500 + ((key + 1) * 100) }}" >
+		<div class="col-lg-4 col-md-6 d-flex mb-4 align-items-stretch" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-once="true" data-aos-duration="{{ 500 + ((key + 1) * 100) }}" >
 			<div class="card" style="border-radius: 2rem">
 				<div class="card-body bg-services text-white py-5 px-4" style="border-radius: 2rem">
 					<div class="card-title h3 text-white text-center fw-bold">{{ item.title }}</div>

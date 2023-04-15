@@ -295,3 +295,14 @@ body {
 .back-to-top:hover {
   color: #fff;
 }
+
+.circle-card{
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+
+}
