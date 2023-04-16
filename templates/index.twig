@@ -143,17 +143,20 @@
 	{
 		icon: "bi-telephone-fill",
 		title: "Call to ask any question",
-		data: phoneNumber
+		data: phoneNumber,
+		url: "https://wa.me/" ~ phoneNumber | replace("+", "") ~ "?text=Hi, I have a question about your service."
 	},
 	{
 		icon: "bi-envelope-at",
 		title: "Email to get free quote",
-		data: siteInfo.email
+		data: siteInfo.email,
+		url: "mailto:" ~ siteInfo.email
 	},
 	{
 		icon: "bi-geo-alt-fill",
 		title: "Location",
-		data: siteInfo.location
+		data: siteInfo.location,
+		url: "https://www.google.com/maps/search/?api=1&query=" ~ siteInfo.location
 	}
 ] %}
 
@@ -185,7 +188,7 @@
 						</div>
 						<div class="ps-4">
 							<h4 class="fw-semi-bold">{{ item.title }}</h4>
-							<p class="text-colors mb-0 h5 fw-medium">{{ item.data }}</p>
+							<a href="{{ item.url }}" target="_blank" class="text-colors mb-0 h5 fw-medium">{{ item.data }}</a>
 						</div>
 					</div>
 				{% endfor %}

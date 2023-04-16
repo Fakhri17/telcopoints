@@ -6,8 +6,8 @@
 <div class="row overflow-hidden justify-content-center">
 	{% for key, item in data.serviceList %}
 		<div class="col-lg-4 col-md-6 d-flex mb-4 align-items-stretch" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-once="true" data-aos-duration="{{ 500 + ((key + 1) * 100) }}" >
-			<div class="card" style="border-radius: 2rem">
-				<div class="card-body bg-services text-white py-5 px-4" style="border-radius: 2rem">
+			<div class="card border-0">
+				<div class="card-body bg-services text-white py-5 px-4" style="border-radius: 3.5rem">
 					<div class="card-title h3 text-white text-center fw-bold">{{ item.title }}</div>
 					<div class="card-text text-white mb-4">{{ item.serviceSubtitle }}</div>
 					<div class="text-center text-black">
