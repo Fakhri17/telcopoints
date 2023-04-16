@@ -31,7 +31,7 @@ body {
   color: var(--primary);
 }
 
-.text-telco-blue{
+.text-telco-blue {
   color: #0077c2;
 }
 
@@ -73,6 +73,15 @@ body {
 
 .bg-footer {
   background-color: #408faa;
+}
+
+.bg-breadcrumb {
+  background-color: #0077c2;
+}
+
+.header-partners {
+  color: white;
+  padding: 50px;
 }
 
 .btn-detail:hover {
@@ -283,8 +292,17 @@ body {
   cursor: pointer;
 }
 
-
-.back-to-top:hover{
+.back-to-top:hover {
   color: #fff;
+}
+
+.circle-card{
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
 
 }

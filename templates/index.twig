@@ -9,14 +9,14 @@
 
 {% block content %}
 
-<div class="container-fluid position-relative p-0" data-aos="fade-in" id="home">
+<div class="position-relative p-0" data-aos="fade-in" id="home">
 	<div id="header-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
 		<div class="carousel-inner">
 			<div class="carousel-item active">
 				<div class="w-100 height-banner" style="width: 100vw;" alt="Image"></div>
 				<div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
 					<div class="p-3" style="max-width: 1000px;">
-						<h5 data-aos="fade-down" data-aos-once="true" class="text-white text-uppercase mb-3">{{ entry.bannerSubtitle }}</h5>
+						<h3 data-aos="fade-down" data-aos-once="true" class="text-white text-uppercase mb-3">{{ entry.bannerSubtitle }}</h3>
 						<h1 data-aos="fade-up" data-aos-once="true" class="display-4 text-white mb-md-4">{{ entry.bannerTitle }}</h1>
 					</div>
 				</div>
@@ -26,8 +26,8 @@
 	</div>
 </div>
 
-<div class="container-fluid py-5" id="about">
-	<div class="container py-5">
+<div class="py-5" id="about">
+	<div class="container">
 		<div class="row">
 			<div class="col-lg-7 col-12" data-aos="fade-right" data-aos-easing="ease-in-out" data-aos-once="true">
 				{% include "_includes/section_title.twig" with { data: {
@@ -55,13 +55,12 @@
 
 
 <!-- Service Start -->
-<div class="container-fluid py-5" id="services">
-	<div class="container py-5">
+<div class="py-5" id="services">
+	<div class="container">
 		<div data-aos="fade-down" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-once="true">
 			{% include "_includes/section_title.twig" with { data: {
 				class: 'text-center mx-auto',
-				title: entry.serviceTitle,
-				subtitle: 'Our Services',
+				subtitle: 'Our Soulutions',
 			}} only %}
 		</div>
 		
@@ -72,9 +71,39 @@
 </div>
 <!-- Service End -->
 
+<!-- Why Partners with us Section -->
+<div class="py-5">
+	<div class="container">
+		<div data-aos="fade-down" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-once="true">
+			{% include "_includes/section_title.twig" with { data: {
+				class: 'text-center mx-auto',
+				subtitle: 'Why Partners with us',
+				title: 'At Telco One Point, we prioritize our top-of-the-line solutions with the partners to collectively our customer’s goal and deliver solutions for great network.',
+			}} only %}
+		</div>
+		<div class="row">
+			<div class="col-lg-4 col-md-6 d-flex justify-content-center"  data-aos="fade-up" data-aos-duration="500" data-aos-easing="ease-in-out" data-aos-once="true">
+				<div class="bg-colors circle-card">
+					<h4 class="header-partners text-center">Excellent Services</h4>
+				</div>
+			</div>
+			<div class="col-lg-4 col-md-6 d-flex justify-content-center" data-aos="fade-up" data-aos-duration="700" data-aos-easing="ease-in-out" data-aos-once="true">
+				<div class="bg-colors circle-card">
+					<h4 class="header-partners text-center">Quality Guaranteed</h4>
+				</div>
+			</div>
+			<div class="col-lg-4 col-md-6 d-flex justify-content-center" data-aos="fade-up" data-aos-duration="900" data-aos-easing="ease-in-out" data-aos-once="true">
+				<div class="bg-colors circle-card">
+					<h4 class="header-partners text-center">Certified</h4>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Why Partners with us Section End -->
 
 <!-- Partner Section Start -->
-<div class="container-fluid py-5">
+<div class="py-5">
 	<div class="container">
 		<div class="mx-auto text-center text-uppercase">
 			<h4 data-aos="fade-down" data-aos-once="true" class="fw-bold header-colors">
@@ -114,23 +143,26 @@
 	{
 		icon: "bi-telephone-fill",
 		title: "Call to ask any question",
-		data: phoneNumber
+		data: phoneNumber,
+		url: "https://wa.me/" ~ phoneNumber | replace("+", "") ~ "?text=Hi, I have a question about your service."
 	},
 	{
 		icon: "bi-envelope-at",
 		title: "Email to get free quote",
-		data: siteInfo.email
+		data: siteInfo.email,
+		url: "mailto:" ~ siteInfo.email
 	},
 	{
 		icon: "bi-geo-alt-fill",
 		title: "Location",
-		data: siteInfo.location
+		data: siteInfo.location,
+		url: "https://www.google.com/maps/search/?api=1&query=" ~ siteInfo.location
 	}
 ] %}
 
 <!-- Contact us Start -->
-<div class="container-fluid py-5" id="contact">
-	<div class="container py-5">
+<div class="py-5" id="contact">
+	<div class="container">
 		<div data-aos="fade-down" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-once="true">
 		{% include "_includes/section_title.twig" with { data: {
 			class: 'text-center mx-auto',
@@ -149,14 +181,14 @@
 			</div>
 			<div class="col-lg-6">
 				{% for key, item in contactListInfo %}
-					<div class="d-flex mb-4 mt-2" data-aos="fade-up" data-aos-duration="{{ 500 * (key + 1) }}" data-aos-easing="ease-in-out" data-aos-once="true">
+					<div class="d-flex mb-4 mt-2" data-aos="fade-up" data-aos-duration="{{ 500 + ((key + 1) * 100) }}" data-aos-easing="ease-in-out" data-aos-once="true">
 						<div class=" bg-colors d-flex align-items-center justify-content-center rounded-3"
 							style="width: 60px; height: 60px;">
 							<i class="{{ item.icon }} text-white fs-4 p-5"></i>
 						</div>
 						<div class="ps-4">
 							<h4 class="fw-semi-bold">{{ item.title }}</h4>
-							<p class="text-colors mb-0 h5 fw-medium">{{ item.data }}</p>
+							<a href="{{ item.url }}" target="_blank" class="text-colors mb-0 h5 fw-medium">{{ item.data }}</a>
 						</div>
 					</div>
 				{% endfor %}
