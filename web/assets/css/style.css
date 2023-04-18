@@ -296,7 +296,7 @@ body {
   color: #fff;
 }
 
-.circle-card{
+.circle-card {
   width: 200px;
   height: 200px;
   border-radius: 50%;
@@ -304,10 +304,9 @@ body {
   justify-content: center;
   align-items: center;
   margin: 0 auto;
-
 }
 
-.circle-service{
+.circle-service {
   width: 300px;
   height: 300px;
   border-radius: 50%;
@@ -317,4 +316,8 @@ body {
   margin: 0 auto;
   background-color: var(--primary);
   color: white;
+}
+
+.card-body {
+  border-radius: 5rem;
 }
