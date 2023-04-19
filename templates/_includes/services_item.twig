@@ -5,14 +5,17 @@
 {# data-aos-delay="{{ key + 2 }}000" #}
 <div class="row overflow-hidden justify-content-center">
 	{% for key, item in data.serviceList %}
-		<div class="col-lg-4 col-md-6 mb-4 d-flex justify-content-center" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-once="true" data-aos-duration="{{ 500 + ((key + 1) * 100) }}" >
-			<div class="bg-colors circle-service p-2">
-				<div>
-					<h4 class="text-white text-center">{{ item.title }}</h4>
-					<p class="text-white mb-4">{{ item.serviceSubtitle }}</p>
-					<div class="text-center text-black">
-						<a href="{{ url('/services/' ~ item.slug ) }}" class="text-black btn btn-outline-light btn-detail" style="btn-detail">Lihat Detail</a>
+		<div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-once="true" data-aos-duration="{{ 500 + ((key + 1) * 100) }}">
+			<div class="card border-0">
+				<div class="card-body circle-service text-white">
+					<div>
+						<div class="card-title h4 text-white text-center fw-bold">{{ item.title }}</div>
+						{# <div class="card-text text-white mb-4">{{ item.serviceSubtitle }}</div> #}
+						<div class="text-center text-black mt-3">
+							<a href="{{ url('/services/' ~ item.slug ) }}" class="text-black btn btn-outline-light btn-detail" style="btn-detail">Lihat Detail</a>
+						</div>
 					</div>
+					
 				</div>
 				
 			</div>
