@@ -307,9 +307,9 @@ body {
 }
 
 .circle-service {
-  width: 300px;
-  height: 300px;
-  border-radius: 50%;
+  width: 350px;
+  height: 200px;
+  border-radius: 5rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -318,6 +318,3 @@ body {
   color: white;
 }
 
-.card-body {
-  border-radius: 5rem;
-}
