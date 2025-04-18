@@ -23,4 +23,8 @@ return GeneralConfig::create()
     // Disallow robots
     ->disallowRobots(App::env('DISALLOW_ROBOTS') ?? false)
     ->cpTrigger(App::env('CRAFT_CP_TRIGGER') ?? null)
+    // Set aliases
+    ->aliases([
+        '@webroot' => App::env('WEB_ROOT') ?? dirname(__DIR__) . '/web',
+    ])
 ;
