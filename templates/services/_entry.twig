@@ -1,0 +1,56 @@
+{% extends '_layouts/base.twig' %}
+
+{% set sectionList = craft.entries()
+  .section('services')
+  .all()
+%}
+{% set homepage = craft.entries()
+  .section('homepage')
+  .one()
+%}
+
+{% css %}
+  .breadcrumb-item+.breadcrumb-item::before {
+    float: left;
+    padding-right: .5rem;
+    color: #fff;
+    content: var(--bs-breadcrumb-divider, ">") /* rtl: var(--bs-breadcrumb-divider, ">") */;
+  }
+{% endcss %}
+
+{% block content %}
+
+{% include "_includes/breadcrumb.twig" with { data: {
+  title: entry.title,
+  subtitle: 'Services',
+}} %}
+<div class="container">
+  <div class="justify-content-center align-center container-fluid services-content d-flex flex-column"
+    style="width: 100%;">
+    <div class="flex-column">
+      <div class="d-flex justify-content-center align-center tw-mx-auto">
+        {# <img src="https://via.placeholder.com/720x480.png" class="img-fluid rounded" /> #}
+        <img src="{{siteUrl}}assets/img/logo_telco_resizer.jpg" class="img-fluid" />
+      </div>
+      <div class="justify-content-center align-center mt-5 container">
+        <h1 class="text-uppercase text-center">{{ entry.title }}</h1>
+        <div class="my-5">{{ entry.serviceDetail|raw }}</div>
+      </div>
+    </div>
+  </div>
+  <div class="my-5">
+    {% include "_includes/section_title.twig" with { data: {
+      class: 'text-center mx-auto',
+      title: homepage.serviceTitle,
+      subtitle: 'Our Services',
+    }} only %}
+    {% include "_includes/services_item.twig" with { data : {
+      serviceList: sectionList,
+    }} only %}
+  </div>
+
+</div>
+
+
+
+{% endblock %}

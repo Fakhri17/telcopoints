@@ -1,0 +1,19 @@
+columnSuffix: uckmgmdj
+contentColumnType: string
+fieldGroup: ca8c6a64-a648-4dcf-9b70-f800be9f3459 # Common
+handle: serviceTitle
+instructions: null
+name: 'Service Title'
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: false
+  columnType: string
+  initialRows: 4
+  multiline: false
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

@@ -1,0 +1,56 @@
+<!-- Footer Start -->
+
+{% set navigation = craft.entries()
+	.section('navigation')
+	.with([
+		'footer',
+	])
+	.all() 
+%}
+
+<div class="text-white bg-footer">
+	<div class="container text-start p-4">
+		<div class="d-md-flex d-sm-grid justify-content-between fs-6 align-items-center footer-media">
+			<div class="flex-column fs-5">
+				<div>
+					{% for item in navigation[0].footer %}
+						<a href="{{ item.url }}" class="anchor">{{ item.title }}</a>
+						{% if not loop.last %}
+							<span class="border-end mx-2"></span> 
+						{% endif %} 
+					{% endfor %}
+					
+				</div>
+				<hr />
+				<div class="d-flex align-items-center justify-content-center" >
+					<p class="mb-0">&copy; <a class="text-white border-bottom" href="{{ siteUrl }}">Telco One Point</a>. All
+						Rights Reserved.
+						Designed by <a class="text-white border-bottom" href="https://www.instagram.com/coder.ittelkomsby/?hl=id" target="_blank">CODER</a></p>
+				</div>
+			</div>
+			<div classd="d-flex align-items-center justify-content-center">
+			  <div class="d-md-flex d-sm-grid my-md-0 my-4 gap-3 fs-5">
+					<div>Always Connected</div>
+					<div class="d-flex gap-4">
+						<div>
+							<a href="#" class="anchor"><i class="bi bi-facebook"></i></a>
+						</div>
+						<div>
+							<a href="#" class="anchor"><i class="bi bi-twitter"></i></a>
+						</div>
+						<div>
+							<a href="#" class="anchor"><i class="bi bi-instagram"></i></a>
+						</div>
+						<div>
+							<a href="#" class="anchor"><i class="bi bi-envelope"></i></a>
+						</div>
+					</div>
+					{# <div><i class="bi bi-twitter"></i></div>
+					<div><i class="bi bi-instagram"></i></div>
+					<div><i class="bi bi-envelope"></i></div> #}
+        </div>
+			</div>
+		</div>
+	</div>
+</div>
+

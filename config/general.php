@@ -22,4 +22,5 @@ return GeneralConfig::create()
     ->allowAdminChanges(App::env('ALLOW_ADMIN_CHANGES') ?? false)
     // Disallow robots
     ->disallowRobots(App::env('DISALLOW_ROBOTS') ?? false)
+    ->cpTrigger(App::env('CRAFT_CP_TRIGGER') ?? null)
 ;

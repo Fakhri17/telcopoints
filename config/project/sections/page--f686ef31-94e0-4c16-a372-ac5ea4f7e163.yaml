@@ -1,0 +1,15 @@
+defaultPlacement: end
+enableVersioning: false
+handle: page
+name: Page
+propagationMethod: all
+siteSettings:
+  fe9a96dd-f659-48a1-9d2c-a7e9df599648: # telcopoints
+    enabledByDefault: true
+    hasUrls: true
+    template: page/_entry
+    uriFormat: 'page/{slug}'
+structure:
+  maxLevels: null
+  uid: e35c8b5d-5db9-458f-a98c-0172c2d151c7
+type: structure

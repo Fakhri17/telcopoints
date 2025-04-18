@@ -1,0 +1,320 @@
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --primary: #64c191 !important;
+  height: 100%;
+
+  /* --secondary: #34AD54;
+    --light: #EEF9FF;
+    --dark: #091E3E; */
+}
+
+/* Animate css */
+/* .animate__animated.animate__fadeInRightBig {
+  --animate-duration: 6s;
+} */
+
+/* Animate css end */
+
+/* body background */
+body {
+  position: relative;
+  overflow-y: visible;
+  overflow-x: hidden;
+  height: 100%;
+}
+
+.text-telco-green {
+  color: var(--primary);
+}
+
+.text-telco-blue {
+  color: #0077c2;
+}
+
+/* body background end */
+
+.anchor {
+  color: white !important;
+}
+
+/* Header*/
+.header-colors {
+  color: var(--primary);
+}
+
+.header-size {
+  font-size: 50px;
+}
+/* Header end*/
+
+/* Partners */
+.partner-section {
+  display: grid !important;
+  /* height: 900px; */
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+/* Partners end */
+
+/* background-logo colors*/
+.bg-colors {
+  background-color: var(--primary);
+}
+/* background-logo colors end*/
+
+/* Background component services */
+.bg-services {
+  background-color: var(--primary);
+}
+
+.bg-footer {
+  background-color: #408faa;
+}
+
+.bg-breadcrumb {
+  background-color: #0077c2;
+}
+
+.header-partners {
+  color: white;
+  padding: 50px;
+}
+
+.btn-detail:hover {
+  color: black;
+}
+
+.text-services {
+  color: var(--primary);
+}
+
+/* Background component services end */
+
+/*** Carousel ***/
+.carousel-caption {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #0077c2;
+  z-index: 1;
+}
+/*** Carousel End ***/
+
+/*** Button to Top ***/
+.btn {
+  font-family: "Nunito", sans-serif;
+  font-weight: 600;
+  transition: 0.5s;
+}
+
+.btn-primary,
+.btn-secondary {
+  color: #ffffff;
+  box-shadow: inset 0 0 0 50px transparent;
+  background-color: var(--primary);
+}
+
+.btn-primary:hover {
+  box-shadow: inset 0 0 0 0 var(--primary);
+  background-color: var(--primary);
+  border-color: white;
+}
+
+.btn-secondary:hover {
+  box-shadow: inset 0 0 0 0 var(--primary);
+}
+
+.btn-square {
+  width: 36px;
+  height: 36px;
+}
+
+.btn-sm-square {
+  width: 30px;
+  height: 30px;
+}
+
+.btn-lg-square {
+  width: 48px;
+  height: 48px;
+}
+
+.btn-square,
+.btn-sm-square,
+.btn-lg-square {
+  padding-left: 0;
+  padding-right: 0;
+  text-align: center;
+}
+/*** Button to Top End ***/
+
+/* text colors*/
+.text-colors {
+  color: var(--primary);
+}
+/* text colors end*/
+
+/* bg object-fit*/
+.bg-fit {
+  object-fit: contain;
+}
+/* bg object-fit end*/
+
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link.active {
+  color: #0c944e;
+}
+
+.footer-media {
+  display: grid !important;
+  /* margin-top: 18px !important; */
+}
+
+@media (max-width: 991.98px) {
+  .sticky-top.navbar-dark {
+    position: relative;
+    background: #ffffff;
+  }
+
+  .navbar-dark .navbar-nav .nav-link,
+  .navbar-dark .navbar-nav .nav-link.show,
+  .sticky-top.navbar-dark .navbar-nav .nav-link {
+    padding: 10px 0;
+    color: var(--dark);
+  }
+
+  .navbar-dark .navbar-brand h1 {
+    color: var(--primary);
+  }
+}
+
+@media (min-width: 992px) {
+  .sticky-top.navbar-dark {
+    position: fixed;
+    background: #ffffff;
+  }
+
+  .sticky-top.navbar-dark .navbar-brand h1 {
+    color: var(--primary);
+  }
+
+  .navbar-dark .navbar-nav .nav-link::before {
+    background: var(--primary);
+  }
+
+  .contact {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .header-size {
+    font-size: 100px;
+  }
+
+  .footer-media {
+    display: flex !important;
+    /* margin-top: 18px !important; */
+  }
+
+  /* Partners */
+  .partner-section {
+    display: flex !important;
+  }
+  /* Partners end */
+}
+
+.rounded-5 {
+  border-radius: 1rem;
+}
+
+.height-banner {
+  min-height: 100vh;
+}
+
+@media (max-width: 576px) {
+  .height-banner {
+    min-height: 50vh;
+  }
+  .carousel-caption h1 {
+    font-size: 30px;
+    font-weight: 800 !important;
+  }
+  .carousel-caption h5 {
+    font-size: 17px;
+    font-weight: 700 !important;
+  }
+
+  /* Services page */
+  .bg-header-service {
+    height: 20vh !important;
+  }
+  .header-service {
+    margin-bottom: 35px !important;
+  }
+  /* End */
+
+  /* Partners */
+  .partner-section {
+    /* display: flex !important; */
+    height: 500px;
+    justify-content: center;
+    text-align: center;
+    margin-top: 40px;
+  }
+  /* Partners end */
+}
+
+/* Services page */
+
+.header-service {
+  margin-bottom: 100px;
+  text-align: bottom;
+  align-content: bottom;
+}
+
+.bg-header-service {
+  justify-content: center;
+  width: 100vw;
+  height: 40vh;
+}
+
+.services-content {
+  margin-top: 60px;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.back-to-top:hover {
+  color: #fff;
+}
+
+.circle-card {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.circle-service {
+  width: 350px;
+  height: 200px;
+  border-radius: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  background-color: var(--primary);
+  color: white;
+}
+

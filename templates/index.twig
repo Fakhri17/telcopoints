@@ -1,191 +1,198 @@
-<!DOCTYPE html>
-<html lang="en-US">
-<head>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta charset="utf-8" />
-    <title>Welcome to Craft CMS</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
-    <meta name="referrer" content="origin-when-cross-origin" />
-    <style>
-        html,
-        body {
-            font-size: 16px;
-            -webkit-text-size-adjust: 100%;
-            height: 100%;
-            font-family: system-ui, BlinkMacSystemFont, -apple-system, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-        }
+{% extends '_layouts/base.twig' %}
 
-        body {
-            margin: 0;
-            padding: 0;
-            background-color: hsl(212, 60%, 97%);
-            color: hsl(209, 18%, 30%);
-            display: flex;
-        }
+{% set sectionList = craft.entries()
+	.section('services')
+	.all() 
+%}
 
-        h1 {
-            margin-top: 0;
-        }
 
-        h2 {
-            margin-top: 24px;
-            font-size: 1em;
-        }
 
-        h2:first-child {
-            margin-top: 0;
-        }
+{% block content %}
 
-        p {
-            line-height: 1.4em;
-            margin-bottom: 1.4em;
-        }
+<div class="position-relative p-0" data-aos="fade-in" id="home">
+	<div id="header-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+		<div class="carousel-inner">
+			<div class="carousel-item active">
+				<div class="w-100 height-banner" style="width: 100vw;" alt="Image"></div>
+				<div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+					<div class="p-3" style="max-width: 1000px;">
+						<h3 data-aos="fade-down" data-aos-once="true" class="text-white text-uppercase mb-3">{{ entry.bannerSubtitle }}</h3>
+						<h1 data-aos="fade-up" data-aos-once="true" class="display-4 text-white mb-md-4">{{ entry.bannerTitle }}</h1>
+					</div>
+				</div>
+			</div>
 
-        ul {
-            line-height: 1.3em;
-            padding-left: 20px;
-            margin-bottom: 0;
-        }
-
-        ul li {
-            margin-bottom: 0.35em;
-        }
-
-        a {
-            color: #0B69A3;
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        .go {
-            color: #0B69A3;
-        }
-
-        .go:after {
-            padding-left: 4px;
-            content: '→';
-            text-decoration: none !important;
-        }
-
-        small {
-            color: hsl(211, 11%, 59%);
-        }
-
-        code {
-            display: inline-block;
-            color: #EF4E4E;
-            padding: 0 2px;
-            background: hsl(212, 60%, 97%);
-            border-radius: 3px;
-            line-height: 1.3;
-            font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
-            font-size: 0.9em;
-        }
-
-        #container {
-            flex-grow: 1;
-        }
-
-        #modal {
-            background: #fff;
-        }
-
-        #aside {
-            background: hsl(212, 60%, 97%);
-        }
-
-        .content {
-            padding: 35px;
-            padding-left: calc(35px + env(safe-area-inset-left));
-            padding-right: calc(35px + env(safe-area-inset-right));
-        }
-
-        @media (min-width:768px) {
-            #modal {
-                display: flex;
-            }
-
-            #main {
-                width: 50%;
-                overflow: auto;
-            }
-
-            #aside {
-                width: 50%;
-                overflow: auto;
-            }
-        }
-
-        @media (min-width:768px) and (min-height: 376px) {
-            body {
-                background-color: hsl(212, 50%, 93%);
-                background-image: url("{{ view.getAssetManager().getPublishedUrl('@app/web/assets/installer/dist', true, 'images/installer-bg.png') }}");
-                background-repeat: no-repeat;
-                background-size: cover;
-                background-position: center center;
-            }
-
-            #container {
-                display: flex;
-                padding: 24px;
-                align-items: center;
-                justify-content: center;
-            }
-
-            #modal {
-                height: 100%;
-                max-width: 800px;
-                max-height: 525px;
-                border-radius: 4px;
-                overflow: auto;
-                box-shadow: 0 25px 100px rgba(0, 0, 0, 0.5);
-            }
-
-            #aside {
-                overflow: auto;
-            }
-        }
-
-    </style>
-</head>
-<body class="ltr">
-<div id="container">
-    <div id="modal">
-        <div id="main">
-            <div class="content">
-                <h1>Welcome</h1>
-                <p>Thanks for installing Craft CMS!</p>
-                <p>You’re looking at the <code>index.twig</code> template file located in your
-                    <code>templates/</code> folder. Once you’re ready to start building out your site’s
-                    front end, you can replace this with something custom.</p>
-                <p>If you’re new to Craft CMS, take some time to check out the resources on the right
-                    when you get a chance&mdash;especially
-                    <a href="https://craftcms.com/discord" target="_blank">Discord</a>
-                    and <a href="http://craftcms.stackexchange.com/" target="_blank">Stack Exchange</a>.
-                    The Craft community is full of smart, friendly, and helpful people!</p>
-                <p><span class="go"><a href="{{ cpUrl('') }}">Go to your control panel</a></span></p>
-            </div>
-        </div>
-        <div id="aside">
-            <div class="content">
-                <h2>Popular Resources</h2>
-                <ul>
-                    <li><a href="https://craftcms.com/docs/getting-started-tutorial/" target="_blank">Tutorial</a><br><small>Learn the basics.</small></li>
-                    <li><a href="https://craftcms.com/docs/4.x/" target="_blank">Documentation</a><br><small>Read the official docs.</small></li>
-                    <li><a href="https://craftcms.com/guides" target="_blank">Knowledge Base</a><br><small>Find answers to common problems.</small></li>
-                    <li><a href="https://twitter.com/hashtag/craftcms" target="_blank">#craftcms</a><br><small>See the latest tweets about Craft.</small></li>
-                    <li><a href="https://craftcms.com/discord" target="_blank">Discord</a><br><small>Meet the community.</small></li>
-                    <li><a href="http://craftcms.stackexchange.com/" target="_blank">Stack Exchange</a><br><small>Get help and help others.</small></li>
-                    <li><a href="https://craftquest.io/" target="_blank">CraftQuest</a><br><small>Watch unlimited video lessons and courses.</small></li>
-                    <li><a href="http://craftlinklist.com/" target="_blank">Craft Link List</a><br><small>Stay in-the-know.</small></li>
-                    <li><a href="https://nystudio107.com/blog" target="_blank">nystudio107 Blog</a><br><small>Learn Craft and modern web development.</small></li>
-                </ul>
-            </div>
-        </div>
-    </div>
+		</div>
+	</div>
 </div>
-</body>
-</html>
+
+<div class="py-5" id="about">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-7 col-12" data-aos="fade-right" data-aos-easing="ease-in-out" data-aos-once="true">
+				{% include "_includes/section_title.twig" with { data: {
+					class: 'animate__animated animate__fadeInUp',
+					title: entry.aboutTitle,
+					subtitle: 'About Us',
+				}} only %}
+				<p class="mb-4">{{ entry.aboutSummary|raw }}</p>
+			</div>
+			<div class="col-lg-5 col-12" data-aos="fade-left" data-aos-easing="ease-in-out" data-aos-once="true">
+				<div class="text-center">
+					<img class="img-fluid mb-3" src="{{siteUrl}}assets/img/logo_telco_prev_ui.png">
+				</div>
+				{# yang perlu diganti #}
+				<div class="text-center text-uppercase">
+					<h1 class="mb-0 fs-1 fw-bold">Telco One Point</h1>
+				</div>
+				{# end #}
+			</div>
+		</div>
+	</div>
+</div>
+<!-- About End -->
+
+
+
+<!-- Service Start -->
+<div class="py-5" id="services">
+	<div class="container">
+		<div data-aos="fade-down" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-once="true">
+			{% include "_includes/section_title.twig" with { data: {
+				class: 'text-center mx-auto',
+				subtitle: 'Our Soulutions',
+			}} only %}
+		</div>
+		
+		{% include "_includes/services_item.twig" with { data : {
+			serviceList: sectionList,
+		}} only %} 
+	</div>
+</div>
+<!-- Service End -->
+
+<!-- Why Partners with us Section -->
+<div class="py-5">
+	<div class="container">
+		<div data-aos="fade-down" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-once="true">
+			{% include "_includes/section_title.twig" with { data: {
+				class: 'text-center mx-auto',
+				subtitle: 'Why Partners with us',
+				title: 'At Telco One Point, we prioritize our top-of-the-line solutions with the partners to collectively our customer’s goal and deliver solutions for great network.',
+			}} only %}
+		</div>
+		<div class="row">
+			<div class="col-lg-4 col-md-6 mb-3 mb-lg-0 d-flex justify-content-center" data-aos="fade-up" data-aos-duration="500" data-aos-easing="ease-in-out" data-aos-once="true">
+				<div class="bg-colors circle-card">
+					<h4 class="header-partners text-center">Excellent Services</h4>
+				</div>
+			</div>
+			<div class="col-lg-4 col-md-6 mb-3 mb-lg-0 d-flex justify-content-center" data-aos="fade-up" data-aos-duration="700" data-aos-easing="ease-in-out" data-aos-once="true">
+				<div class="bg-colors circle-card">
+					<h4 class="header-partners text-center">Quality Guaranteed</h4>
+				</div>
+			</div>
+			<div class="col-lg-4 col-md-6 mb-3 mb-lg-0 d-flex justify-content-center" data-aos="fade-up" data-aos-duration="900" data-aos-easing="ease-in-out" data-aos-once="true">
+				<div class="bg-colors circle-card">
+					<h4 class="header-partners text-center">Certified</h4>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Why Partners with us Section End -->
+
+<!-- Partner Section Start -->
+<div class="py-5">
+	<div class="container">
+		<div class="mx-auto text-center text-uppercase">
+			<h4 data-aos="fade-down" data-aos-once="true" class="fw-bold header-colors">
+				Our Partners
+			</h4>
+		</div>
+		<div data-aos="fade-up" data-aos-once="true" class="owl-carousel vendor-carousel align-items-center my-5 cursor-pointer">
+			<div>
+				<img src="https://im3-img.indosatooredoo.com/iohassets/images/icons/logo-ioh.svg"/>
+			</div>	
+			<div>
+				<img src="https://www.telkomsel.com/sites/default/files/mainlogo-2022-rev.png"/>
+			</div>	
+			<div>
+				<img src="https://d17e22l2uh4h4n.cloudfront.net/corpweb/pub-xlaxiata/2019-03/xl-logo.png"/>
+			</div>	
+			<div>
+				<img src="https://consumer.huawei.com/etc/designs/huawei-cbg-site/clientlib-campaign-v4/common-v4/images/logo.svg"/>
+			</div>		
+			<div>
+				<img src="https://www.nokia.com/themes/custom/onenokia_reskin/logo.svg"/>
+			</div>	
+			<div>
+				<img src="https://pluspng.com/img-png/zte-logo-png-zte-logo-image-3000.png"/>
+			</div>	
+		</div>
+	</div>
+</div>
+<!-- Partner Section End -->
+
+
+{% set phoneNumber = siteInfo.telepon.format('e164') %}
+{% set contactListInfo = [
+	{
+		icon: "bi-telephone-fill",
+		title: "Call to ask any question",
+		data: phoneNumber,
+		url: "https://wa.me/" ~ phoneNumber | replace("+", "") ~ "?text=Hi, I have a question about your service."
+	},
+	{
+		icon: "bi-envelope-at",
+		title: "Email to get free quote",
+		data: siteInfo.email,
+		url: "mailto:" ~ siteInfo.email
+	},
+	{
+		icon: "bi-geo-alt-fill",
+		title: "Location",
+		data: siteInfo.location,
+		url: "https://www.google.com/maps/search/?api=1&query=" ~ siteInfo.location
+	}
+] %}
+
+<!-- Contact us Start -->
+<div class="py-5" id="contact">
+	<div class="container">
+		<div data-aos="fade-down" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-once="true">
+		{% include "_includes/section_title.twig" with { data: {
+			class: 'text-center mx-auto',
+			title: entry.contactTitle,
+			subtitle: 'Contact Us',
+		}} only %}
+		</div>
+		<div class="row">
+			<div class="col-lg-6 mb-5 mb-lg-0" data-aos="fade-down" data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-once="true">
+				<div class="text-center" >
+					<img class="img-fluid mb-3" src="{{siteUrl}}assets/img/logo_telco_prev_ui.png">
+				</div>
+				<div class="text-center text-uppercase">
+					<h1 class="mb-0 fs-1 fw-bold">Telco One Point</h1>
+				</div>
+			</div>
+			<div class="col-lg-6">
+				{% for key, item in contactListInfo %}
+					<div class="d-flex mb-4 mt-2" data-aos="fade-up" data-aos-duration="{{ 500 + ((key + 1) * 100) }}" data-aos-easing="ease-in-out" data-aos-once="true">
+						<div class=" bg-colors d-flex align-items-center justify-content-center rounded-3"
+							style="width: 60px; height: 60px;">
+							<i class="{{ item.icon }} text-white fs-4 p-5"></i>
+						</div>
+						<div class="ps-4">
+							<h4 class="fw-semi-bold">{{ item.title }}</h4>
+							<a href="{{ item.url }}" target="_blank" class="text-colors mb-0 h5 fw-medium">{{ item.data }}</a>
+						</div>
+					</div>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Contact Us End -->
+
+{% endblock %}
